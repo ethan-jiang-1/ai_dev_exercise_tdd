@@ -105,11 +105,34 @@
 
 ---
 
+## 第4阶段：执行TDD核心循环 (Executing the TDD Core Loop)
+
+**上下文**: 在"第2阶段"成功生成 `practice_xxx.md` 文件后，针对该文件中定义的每一个特性，AI将引导用户或独立完成TDD的5步开发循环。
+
+**核心目标**: 确保AI为 `practice_xxx.md` 中定义的每个特性，严格遵循 **`../tdd_rules/tdd_core_loop_steps.md`** 中定义的TDD 5步开发循环。
+
+**AI执行原则与交互指引**:
+
+1.  **权威指南**: AI必须将 **`../tdd_rules/tdd_core_loop_steps.md`** 作为执行TDD每个特性开发的唯一和最终权威指南。
+2.  **严格遵循**: 对于 `practice_xxx.md` 中的每一个特性，AI都必须严格按照 **`../tdd_rules/tdd_core_loop_steps.md`** 中详述的5个步骤顺序执行。
+    *   这包括但不限于：所有产出物（思考文档、测试代码、实现代码、特性文档）的创建、命名规范、存放路径、内容长度限制及拆分规则。
+    *   特别注意，**`../tdd_rules/tdd_core_loop_steps.md`** 明确规定了在TDD核心循环的第4步（实现代码）中**不应创建** `_s4_...md` 思考文档。
+3.  **用户故事处理**: 关于是否为每个特性创建独立的 `_user_story_{feature_name}.md` 文件，AI应参照 `practice_xxx.md` 文件本身（或其生成所依据的 `practice_tdd_template.md` 中 `CREATE_SEPARATE_USER_STORY_FILE` 占位符的设定）来决定。如果需要创建，其存放路径也应遵循 **`../tdd_rules/tdd_core_loop_steps.md`** 中定义的目录结构规范。
+4.  **AI与用户的交互 (可选但推荐)**:
+    *   AI可以在每个TDD步骤完成后，向用户简要报告进展，并提示用户可以查阅遵循 **`../tdd_rules/tdd_core_loop_steps.md`** 生成的相关文件。
+    *   鼓励用户直接查阅 **`../tdd_rules/tdd_core_loop_steps.md`** 以了解详细的执行规范和预期产出。
+5.  **完成标志**: 当 `practice_xxx.md` 中定义的所有特性都已根据 **`../tdd_rules/tdd_core_loop_steps.md`** 完成了完整的TDD 5步循环后，此阶段结束。
+
+**AI告知用户**: "接下来，我将针对 `practice_xxx.md` 中定义的每个特性进行TDD开发。我将严格遵循 **`../tdd_rules/tdd_core_loop_steps.md`** 作为权威指南，来完成所有步骤和产出物的创建。您可以随时查阅该文档以了解详细的执行规范。"
+
+---
+
 ## 总体交互流程概览 (Overall Interactive Workflow Overview)
 
 1.  **AI开场**: 解释交互流程。
 2.  **第1阶段 - 设定新练习集**: 确定要创建的新练习集信息。
 3.  **第2阶段 - 创建练习practice描述 (`practice_xxx.md`)**: 交互式定义practice识别信息、特性（含ID前缀、名称、用户故事、验收标准等）、可选系列信息。AI基于 `practice_tdd_template.md` 生成文件。
 4.  **第3阶段 - 初始化框架文档**: 同步通用教学框架模板，可选创建练习集专属规划与理念文档。
+5.  **第4阶段 - 执行TDD核心循环**: AI针对 `practice_xxx.md` 中的每个特性，严格遵循 `../tdd_rules/tdd_core_loop_steps.md` 完成TDD 5步开发循环。
 
 **最终目标**: 生成结构和内容符合预期的 `practice_xxx.md` 文件，指导TDD练习，确保遵循用户输入、模板和本指南，实现清晰一致。

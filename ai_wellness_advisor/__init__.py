@@ -1,1 +1,1 @@
- 
+# This file makes the 'ai_wellness_advisor' directory a Python package.

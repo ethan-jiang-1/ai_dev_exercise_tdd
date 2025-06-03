@@ -75,8 +75,10 @@
 本练习系列相关的每个TDD周期（例如 `ExTDD_{{NN}}_{{FeatureName}}`）的详细思考过程、约束等文档，将统一归档到主应用项目 `{app_name}` 的开发周期记录区内，具体路径为 `../{app_name}/dev_cycles/{{module_name}}/ExTDD_{{NN}}_{{FeatureName}}/` (例如 `../{{app_name_value}}/dev_cycles/{{EXAMPLE_MODULE_NAME_1}}/ExTDD_01_SampleFeature/`)。对应的代码和测试则位于 `../{app_name}/src/{{module_name}}/` 和 `../{app_name}/tests/{{module_name}}/`。
 
 本项目中的 `practice_*.md` 文件主要作为TDD练习的起点和高级别需求描述。
-{{#if DETAILED_USER_STORY_LOCATION_INFO}}
-本练习中定义的各特性对应的详细用户故事文档 (`_user_story_{feature_name}.md`) 位于上述 `{app_name}` 项目的相应特性开发周期目录中。
+{{#if CREATE_SEPARATE_USER_STORY_FILE}}
+本练习中定义的各特性对应的详细用户故事文档 (`_user_story_{{feature_name}}.md`) 将被创建在 `{app_name}` 项目的相应特性开发周期目录中 (例如 `../{{app_name_value}}/dev_cycles/{{EXAMPLE_MODULE_NAME_1}}/ExTDD_01_SampleFeature/_user_story_sample_feature.md`)。
+{{else}}
+本练习中定义的各特性对应的用户故事将直接包含在本文档的特性描述部分，不创建独立的 `_user_story_{{feature_name}}.md` 文件。
 {{/if}}
 {{/if}}
 
